@@ -25,6 +25,9 @@ if [ -d "~/.config" ]; then
 fi
 ln -svfn ${BASEDIR}/base16-shell ~/.config/base16-shell
 
+# mkdir
+mkdir -p ~/.vim/dirs/backups
+mkdir -p ~/.vim/dirs/undos
 
 # todo
 # add README to script
