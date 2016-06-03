@@ -28,11 +28,18 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build'      : {
+        \ 'mac'     : './install.py --all',
+        \ 'unix'    : './install.py --all',
+        \ 'windows' : 'install.py --all',
+        \ 'cygwin'  : './install.py --all'
+        \ }
+     \ }
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
@@ -117,7 +124,7 @@ nnoremap q: <Nop>
 
 "YouCompleteMe
 set completeopt-=preview
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 "YCM will put icons in Vim's gutter on lines that have a diagnostic set.
 "Turning this off will also turn off the YcmErrorLine and YcmWarningLine
