@@ -6,11 +6,14 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -svfn ${BASEDIR}/ ~/.dotfiles #-n not sure
 
 # vim
-ln -svfn ${BASEDIR}/vim ~/.vim
 ln -svf ${BASEDIR}/vimrc ~/.vimrc
+ln -svfn ${BASEDIR}/vim ~/.vim
 
 # zsh
 ln -svf ${BASEDIR}/zshrc ~/.zshrc
+ln -svfn ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
+chmod +x ${BASEDIR}/oh-my-zsh/tools/install.sh
+sh ${BASEDIR}/oh-my-zsh/tools/install.sh
 
 # dir_colors
 ln -svf ${BASEDIR}/dir_colors ~/.dir_colors
