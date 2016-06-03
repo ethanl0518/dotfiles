@@ -10,6 +10,7 @@ ln -svf ${BASEDIR}/vimrc ~/.vimrc
 ln -svfn ${BASEDIR}/vim ~/.vim
 
 # zsh
+unset ZSH
 ln -svf ${BASEDIR}/zshrc ~/.zshrc
 ln -svfn ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
 chmod +x ${BASEDIR}/oh-my-zsh/tools/install.sh
