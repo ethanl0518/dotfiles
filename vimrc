@@ -33,6 +33,11 @@ NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'chriskempson/base16-vim'
+let g:make = 'gmake'
+if system('uname -o') =~ '^GNU/'
+        let g:make = 'make'
+endif
+NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
 
 call neobundle#end()
 
