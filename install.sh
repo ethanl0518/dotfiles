@@ -13,7 +13,7 @@ ln -svf ${BASEDIR}/vimrc ~/.vimrc
 ln -svf ${BASEDIR}/zshrc ~/.zshrc
 
 # dir_colors
-ln -svf ${BASEDIR}/dircolors ~/.dircolors
+ln -svf ${BASEDIR}/dir_colors ~/.dir_colors
 
 # shell colorscheme
 if [ -d "~/.config" ]; then
