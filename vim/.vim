@@ -1,1 +1,0 @@
-/home/ethanl0518/.vim
