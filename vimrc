@@ -32,19 +32,19 @@ NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'Valloric/YouCompleteMe', {
-     \ 'build'      : {
-        \ 'mac'     : './install.py --all',
-        \ 'unix'    : './install.py --all',
-        \ 'windows' : 'install.py --all',
-        \ 'cygwin'  : './install.py --all'
-        \ }
-     \ }
+"NeoBundle 'Valloric/YouCompleteMe', {
+"     \ 'build'      : {
+"        \ 'mac'     : './install.py --all',
+"        \ 'unix'    : './install.py --all',
+"        \ 'windows' : 'install.py --all',
+"        \ 'cygwin'  : './install.py --all'
+"        \ }
+"     \ }
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
-NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
+NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': g:make}}
 
 call neobundle#end()
 
@@ -65,7 +65,6 @@ set t_Co=256
 set nu
 set wildmode=list
 set mouse=a
-set clipboard=unnamedplus
 set foldenable
 
 "Backup files
