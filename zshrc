@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="tonotdo"
+ZSH_THEME="dpoggi"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,10 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-eval $(dircolors -b $HOME/.dir_colors)
-alias vim='vimx'
+#BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
+#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+#eval $(dircolors -b $HOME/.dir_colors)
+# alias vim='vimx'
 # alias rm='gvfs-trash'
-alias dir='dir --color'
-alias ls='ls --color'
+# alias dir='dir --color'
+# alias ls='ls --color'

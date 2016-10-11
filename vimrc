@@ -1,9 +1,15 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
+" Configuration file for vim
+set modelines=0		" CVE-2007-2438
 
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" Normally we use vim-extensions. If you want true vi-compatibility
+" remove change the following statements
+set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+set backspace=2		" more powerful backspacing
+
+" Don't write backup file if vim is being called by "crontab -e"
+au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" Don't write backup file if vim is being called by "chpass"
+au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " Required:
 set runtimepath^=~/.vim/bundle/neobundle.vim/
@@ -74,8 +80,12 @@ set undofile                      " persistent undos - undo after you re-open th
 set undodir=~/.vim/dirs/undos
 
 "ColorScheme
-colorscheme base16-flat
+"colorscheme base16-flat
+set background=dark
 let base16colorspace=256
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme hybrid
 
 "Tab
 set smarttab
