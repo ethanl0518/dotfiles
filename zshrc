@@ -91,3 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # alias rm='gvfs-trash'
 # alias dir='dir --color'
 # alias ls='ls --color'
+
+export NVM_DIR="/Users/ethanl0518/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

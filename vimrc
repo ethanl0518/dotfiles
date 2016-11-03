@@ -25,7 +25,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
-NeoBundle 'jiangmiao/auto-pairs'
+"NeoBundle 'jiangmiao/auto-pairs'
 "NeoBundle 'vim-airline/vim-airline'
 "NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tpope/vim-surround'
@@ -33,11 +33,14 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'sheerun/vim-polyglot'
+"NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'w0ng/vim-hybrid'
+"NeoBundle 'Raimondi/delimitMate'
 "NeoBundle 'Valloric/YouCompleteMe', {
 "     \ 'build'      : {
 "        \ 'mac'     : './install.py --all',
@@ -50,7 +53,7 @@ let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
-NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': g:make}}
+"NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': g:make}}
 
 call neobundle#end()
 
@@ -61,12 +64,17 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+"remember last position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 
 "blablabla
 syntax on
 filetype plugin indent on 
 set autochdir
-set clipboard=unnamedplus
+set clipboard=unnamed
 set t_Co=256
 set nu
 set wildmode=list
@@ -88,13 +96,13 @@ let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palett
 colorscheme hybrid
 
 "Tab
-set smarttab
-set autoindent
+"set smarttab
+"set autoindent
 set tabstop=4        "A tab is 8 spaces
 set expandtab        "Always uses spaces instead of tabs
 set softtabstop=4    "Insert 4 spaces when tab is pressed
 set shiftwidth=4     "An indent is 4 spaces
-set shiftround       "Round indent to nearest shiftwidth multiple
+"set shiftround       "Round indent to nearest shiftwidth multiple
 
 "FX shortcuts
 map <silent> <F1> :YcmDiags<CR>

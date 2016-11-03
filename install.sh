@@ -66,6 +66,6 @@ mkdir -p $HOME/.vim/dirs/undos
 # add README to script
 # -n not sure
 # -fn unusable?
-
+# mac/linux version
 
 
