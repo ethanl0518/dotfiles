@@ -1,3 +1,9 @@
+"Backup files
+set backup                        " make backup files
+set backupdir=~/.vim/dirs/backups " where to put backup files
+set undofile                      " persistent undos - undo after you re-open the file
+set undodir=~/.vim/dirs/undos
+
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
@@ -58,6 +64,7 @@ endif
 call neobundle#end()
 
 " Required:
+"filetype plugin on
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
@@ -72,7 +79,6 @@ endif
 
 "blablabla
 syntax on
-filetype plugin indent on 
 set autochdir
 set clipboard=unnamed
 set t_Co=256
@@ -80,12 +86,6 @@ set nu
 set wildmode=list
 set mouse=a
 set foldenable
-
-"Backup files
-set backup                        " make backup files
-set backupdir=~/.vim/dirs/backups " where to put backup files
-set undofile                      " persistent undos - undo after you re-open the file
-set undodir=~/.vim/dirs/undos
 
 "ColorScheme
 "colorscheme base16-flat
