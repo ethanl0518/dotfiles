@@ -80,7 +80,7 @@ endif
 "blablabla
 syntax on
 set autochdir
-set clipboard=unnamed
+set clipboard=unnamedplus
 set t_Co=256
 set nu
 set wildmode=list
