@@ -74,6 +74,7 @@ set nu
 set wildmode=list:longest,full
 set mouse=a
 set foldenable
+set paste
 
 "remember last position
 if has("autocmd")
