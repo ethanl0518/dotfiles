@@ -1,5 +1,6 @@
 "TODO
 "use vundle instead of neobundle if YCM is not used
+"neobundle auto update(include itself)
 
 " Backup files
 set backup

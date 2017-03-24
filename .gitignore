@@ -1,2 +1,4 @@
 *.swp
-
+base16-shell/
+oh-my-zsh/
+vim/bundle/neobundle.vim
