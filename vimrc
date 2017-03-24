@@ -1,14 +1,15 @@
-"Backup files
-set backup                        " make backup files
-set backupdir=~/.vim/dirs/backups " where to put backup files
-set undofile                      " persistent undos - undo after you re-open the file
+"TODO
+"use vundle instead of neobundle if YCM is not used
+
+" Backup files
+set backup
+set backupdir=~/.vim/dirs/backups
+set undofile
 set undodir=~/.vim/dirs/undos
 
 set runtimepath^=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
-
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'w0ng/vim-hybrid'
@@ -19,8 +20,6 @@ NeoBundle 'w0ng/vim-hybrid'
 "NeoBundle 'vim-scripts/AfterColors.vim'
 "NeoBundle 'mkitt/tabline.vim'
 "NeoBundle 'Valloric/ListToggle'
-
-
 "NeoBundle 'tpope/vim-surround'
 
 "NeoBundle 'jiangmiao/auto-pairs'
@@ -43,30 +42,20 @@ NeoBundle 'w0ng/vim-hybrid'
 "        let g:make = 'make'
 "endif
 "NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': g:make}}
-
 call neobundle#end()
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
 NeoBundleCheck
 
-
-
-" Configuration file for vim
-"set modelines=0		" CVE-2007-2438
-
-" For Mac 
+" For Mac
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
-
-" Foo
-set nocompatible
-set backspace=2	 "??
+" blabla
 filetype plugin indent on
 syntax on
+set nocompatible
+set backspace=2
 set autochdir
 set clipboard=unnamedplus
 set t_Co=256
@@ -74,7 +63,6 @@ set nu
 set wildmode=list:longest,full
 set mouse=a
 set foldenable
-set paste
 
 "remember last position
 if has("autocmd")
@@ -89,33 +77,21 @@ colorscheme hybrid
 "colorscheme base16-flat
 "let base16colorspace=256
 
-
 "Tab & Indent
-"set smarttab
-"set autoindent
-"set smartindent
-"set cindent
 set tabstop=4        "A tab is 4 spaces
 set expandtab        "Always uses spaces instead of tabs
 set softtabstop=4    "Insert 4 spaces when tab is pressed
 set shiftwidth=4     "An indent is 4 spaces
 "set shiftround       "Round indent to nearest shiftwidth multiple
-			
+
 "FX shortcuts
 "map <silent> <F1> :YcmDiags<CR>
 "map <silent> <F2> :NERDTreeTabsToggle<CR>
 "map <silent> <F3> :TagbarToggle<CR>
-map <silent> <F4> :1,%y+<CR>:echo "Yanked All"<CR>
-"remove space at the end of file
+set pastetoggle=<F3>
+map <silent> <F4> :1,%y<CR>:echo "Yanked All"<CR>
+"remove spaces at the end of file
 map <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-" Tab navigation(gnome sucks)
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<Space>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<Space>
 
 "Disable default Mapping
 nnoremap <S-up> <Nop>
@@ -124,9 +100,13 @@ nnoremap <S-down> <Nop>
 inoremap <S-down> <Nop>
 nnoremap q: <Nop>
 
-"ctags (gnome sucks) "conclict with blablabla
-"nnoremap <C-g> <C-]> 
-"inoremap <C-g> <C-]>
+""Tab navigation
+"nnoremap <C-S-tab> :tabprevious<CR>
+"nnoremap <C-tab>   :tabnext<CR>
+"nnoremap <C-t>     :tabnew<Space>
+"inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+"inoremap <C-tab>   <Esc>:tabnext<CR>i
+"inoremap <C-t>     <Esc>:tabnew<Space>
 
 "Airline
 "let g:airline#extensions#tabline#enabled = 1

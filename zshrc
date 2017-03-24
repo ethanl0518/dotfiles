@@ -94,3 +94,9 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="/Users/ethanl0518/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function swap(){
+    mv "$1" tmp.file.$$
+    mv "$2" "$1"
+    mv tmp.file.$$ $2
+}
